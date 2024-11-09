@@ -7,7 +7,11 @@ window.addEventListener('load', () => {
 
     let collapseTimeout;
 
-    const toggleSidebar = () => sidebarButton.click();
+    const toggleSidebar = () => {
+        // Directly call the function for the sidebar revamp
+        const { SidebarController } = window;
+        SidebarController.handleToolbarButtonClick();
+    };
 
     // Expand sidebar if hovered, and cancel collapse timeout
     const onHover = () => {
