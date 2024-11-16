@@ -1,10 +1,10 @@
-window.addEventListener('load', () => {
+UC_API.Runtime.startupFinished().then(() => {
     const sidebarButton = document.getElementById('sidebar-button');
     const sidebar = document.getElementById('sidebar-main');
     if (!sidebarButton || !sidebar) return;
 
     // Get the computed sidebar width
-    const sidebarWidth = window.getComputedStyle(sidebar).getPropertyValue('width');
+    const sidebarWidth = window.getComputedStyle(sidebar).width;
 
     // Create and inject styles for floating sidebar and custom div
     const style = document.createElement('style');
