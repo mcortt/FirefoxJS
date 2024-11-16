@@ -4,9 +4,7 @@ Userchrome.js customizations for Firefox
 ## New Sidebar Auto-collapse/expand
 ### Demo
 
-https://github.com/user-attachments/assets/ad50e5e9-94ad-4948-a5c5-52ac1b3befc8
-
-
+https://github.com/user-attachments/assets/ae9fea5e-2e3a-4f0d-b1bc-62aafc84d5a9
 
 ### Install
   Note: sidebar-nobutton.uc.mjs doesn't require the sidebar-button to be in the toolbar, but it is buggy. 
