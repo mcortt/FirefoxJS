@@ -47,4 +47,10 @@ window.addEventListener('load', () => {
     // Attach mouse events to sidebar
     sidebar.addEventListener('mouseenter', handleMouseEvent);
     sidebar.addEventListener('mouseleave', handleMouseEvent);
+
+    // Listen for fullscreen change events
+    const handleFullscreenChange = () => {
+        customDiv.style.display = document.fullscreenElement ? 'none' : 'block';
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
 });
