@@ -14,10 +14,9 @@ window.addEventListener('load', () => {
             z-index: 1000;
             height: 100%;
         }
-        #tabbrowser-tabbox, #navigator-toolbox {
+        #tabbrowser-tabbox, #navigator-toolbox, #sidebar {
             outline: none !important;
             box-shadow: none !important;
-
         }
         #custom-injected-div {
             width: ${sidebarWidth};
