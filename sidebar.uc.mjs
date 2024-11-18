@@ -14,6 +14,9 @@ UC_API.Runtime.startupFinished().then(() => {
             z-index: 1000;
             height: 100%;
         }
+        #browser{
+            position: relative;
+        }
         #tabbrowser-tabbox, #navigator-toolbox, #sidebar {
             outline: none !important;
             box-shadow: none !important;
