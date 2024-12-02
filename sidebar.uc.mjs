@@ -13,7 +13,7 @@ UC_API.Runtime.startupFinished().then(() => {
             position: absolute;
             z-index: 1000;
             height: 100%;
-            background: var(--sidebar-background-color) !important;
+            background: var(--lwt-accent-color) !important;
         }
         #browser{
             position: relative;
