@@ -11,7 +11,7 @@ UC_API.Runtime.startupFinished().then(() => {
 
         if (customDiv) {
             customDiv.style.width = sidebarWidth; // Update width if div exists
-            return; // Exit early if div already exists
+            return; 
         }
 
         // Create and inject styles for floating sidebar and custom div
@@ -39,7 +39,7 @@ UC_API.Runtime.startupFinished().then(() => {
         // Create and insert the custom div before the sidebar
         customDiv = document.createElement('div');
         customDiv.id = 'custom-injected-div';
-        customDiv.style.width = sidebarWidth; // Set the width
+        customDiv.style.width = sidebarWidth; 
         document.getElementById('browser').insertBefore(customDiv, sidebar);
     }
 
@@ -62,6 +62,21 @@ UC_API.Runtime.startupFinished().then(() => {
             sidebarTimeout = setTimeout(toggleSidebar, 100);
         }
     };
+
+    // Handle fullscreen changes
+    const handleFullscreenChange = () => {
+        const customDiv = document.getElementById('custom-injected-div');
+        if (!customDiv) return;
+
+        if (document.fullscreenElement) {
+            customDiv.style.display = 'none';
+        } else {
+            customDiv.style.display = '';
+        }
+    };
+
+    // Add event listener for fullscreen changes
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
 
     // Inject the div and styles for the initial window
     injectDivAndStyles();
